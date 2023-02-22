@@ -44,19 +44,40 @@ public class Solution {
             // }
 
             // Gcd and Lcm
-
-            int newN1= n1;
-            int newN2= n2;
-            while(n1%n2!=0){
-                int rem = n1%n2;
-                n1= n2;
-                n2 = rem;
+            // int newN1= n1;
+            // int newN2= n2;
+            // while(n1%n2!=0){
+            //     int rem = n1%n2;
+            //     n1= n2;
+            //     n2 = rem;
                 
                 
-            }
-            int lcm = (newN1*newN2)/n2;
-            System.out.println("Gcd of the no : "+ n2);
-            System.out.println("Lcm of the no : "+ lcm);
+            // }
+            // int lcm = (newN1*newN2)/n2;
+            // System.out.println("Gcd of the no : "+ n2);
+            // System.out.println("Lcm of the no : "+ lcm);
         
+
+            // fabrocci series 
+
+            // int a = 0;
+            // int b= 1;
+            // int temp =0;
+            // System.out.println(a+" "+b);
+            // if(n1>1){
+            //     for(int x =1; x<= n1; x++){
+
+            //         temp = a+b;
+            //         a= b;
+            //         b=temp; 
+            //         System.out.println(temp);
+            //     }
+            // }
+            int res=1;
+            for(int x=1; x<=n2; x++){
+                res = res*n1;
+
+            }
+            System.out.println(res);
         }
 }
