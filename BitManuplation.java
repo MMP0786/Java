@@ -1,7 +1,7 @@
 public class BitManuplation {
     public static void main(String args[]){
         int n =6; //1100
-        int pos =1;
+        int pos =2;
         int bitmask =1<<pos;
         int notBitMask = ~bitmask;
 
@@ -12,8 +12,11 @@ public class BitManuplation {
 
         // }
 
+            // set action
+            int newBit = bitmask | n;
+            System.out.println(newBit);
             int newNumber = notBitMask & n;
-            System.out.println(newNumber);
+            // System.out.println(newNumber);
     }
     
 }
