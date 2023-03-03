@@ -32,14 +32,14 @@ int number[] = {8, 7, 4, 9, 1,10};
      
         // insertion short
         for(int i=1; i<number.length; i++){
-            int current =i;
-            int j = i+1;
+            int current =number[i];
+            int j = i-1;
 
-            while(j>=0 && j>current){
+            while(j>=0 && number[j]>current){
                 number[j+1]= number[j];
                 j--;
             }
-            
+            number[j+1]= current;
         }
 
         for(int i=0; i<number.length; i++){
