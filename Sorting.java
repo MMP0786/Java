@@ -30,7 +30,7 @@ int number[] = {8, 7, 4, 9, 1,10};
         //     number[i]= temp;
         // }
      
-        // insertion short
+        // insertion s ort
         for(int i=1; i<number.length; i++){
             int current =number[i];
             int j = i-1;
