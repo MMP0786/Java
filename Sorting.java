@@ -15,25 +15,38 @@ int number[] = {8, 7, 4, 9, 1,10};
         //     }
         // }
 
-        // insertion Short
-        for(int i=0; i<number.length-1; i++){
-            int smallest =i;
-            for(int j=i+1; j<number.length; j++){
-                if(number[smallest] > number[j]){
-                    smallest =j;
+        // selection Short
+        // for(int i=0; i<number.length-1; i++){
+        //     int smallest =i;
+        //     for(int j=i+1; j<number.length; j++){
+        //         if(number[smallest] > number[j]){
+        //             smallest =j;
 
-                }
-                // swap
+        //         }
+        //         // swap
+        //     }
+        //     int temp = number[smallest];
+        //     number[smallest]= number[i];
+        //     number[i]= temp;
+        // }
+     
+        // insertion short
+        for(int i=1; i<number.length; i++){
+            int current =i;
+            int j = i+1;
+
+            while(j>=0 && j>current){
+                number[j+1]= number[j];
+                j--;
             }
-            int temp = number[smallest];
-            number[smallest]= number[i];
-            number[i]= temp;
+            
         }
-
 
         for(int i=0; i<number.length; i++){
 
             System.out.println(number[i]);
+
+            
         }
     }
 }
