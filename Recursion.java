@@ -7,6 +7,7 @@ public class Recursion {
         // int new_fact = n
         fact *= n;
         PrintNo(n - 1, fact);
+        
     }
 
     // public static void PrintNo(int i, int sum, int n ){
