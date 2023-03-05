@@ -1,14 +1,33 @@
 public class Recursion {
-    public static void PrintNo(int n, int fact) {
-        if (n == 0) {
-            System.out.println(fact);
-            return;
+
+//
+
+ with O(n) complaxcity
+
+    public static int PowerFn(int x, int n){
+        if(x==0){
+            return 0;
         }
-        // int new_fact = n
-        fact *= n;
-        PrintNo(n - 1, fact);
-        
+        if(n==0){
+            return 1;
+        }
+        // System.out.println(x);
+        int new_x = PowerFn(x, n-1);
+        new_x = x*new_x;
+        return new_x;
+
     }
+
+    // public static void PrintNo(int n, int fact) {
+    //     if (n == 0) {
+    //         System.out.println(fact);
+    //         return;
+    //     }
+    //     // int new_fact = n
+    //     fact *= n;
+    //     PrintNo(n - 1, fact);
+        
+    // }
 
     // public static void PrintNo(int i, int sum, int n ){
     // if(i==n){
@@ -30,6 +49,7 @@ public class Recursion {
     // }
     public static void main(String args[]) {
 
-        PrintNo(5, 1);
+        System.out.println(PowerFn(2, 5));
+        // PrintNo(5, 1);
     }
 }
