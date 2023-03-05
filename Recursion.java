@@ -1,5 +1,17 @@
 public class Recursion {
 
+// fabacci series
+
+    public static void fabacci(int n, int a, int b){
+        if(n==0){
+            return ;
+        }
+        // System.out.println(a);
+        int c = a+b;
+        System.out.println(a);
+        fabacci(n-1, b, c);
+
+    }
 // With log n complaxcity
 
     public static int PowerFn(int x, int n){
@@ -67,7 +79,9 @@ public class Recursion {
     // }
     public static void main(String args[]) {
 
-        System.out.println(PowerFn(2, 5));
+        // System.out.println(PowerFn(2, 5));
+      fabacci(7, 0, 1);
+        // System.out.println(outPut);
         // PrintNo(5, 1);
     }
 }
