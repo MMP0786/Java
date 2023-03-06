@@ -2,10 +2,21 @@ class Pen{
     String color;
     String type;
 }
-class Animals{
+class Man{
     String name;
-    String age;
+    int age;
 
+
+Man(String name, int age){
+    this.name = name;
+    this.age = age;
+    System.out.println("constructor called");
+}
+
+public void PrintInfo(){
+    System.out.println(this.name);
+    System.out.println(this.age);
+}
     public void printFn(){
         System.out.println(this.name);
         System.out.println(this.age);
@@ -21,11 +32,18 @@ public class ClassPractice {
 
         // System.out.println(pen1.color);
 
-        Animals man = new Animals();
-        man.name = "Musharraf";
-        man.age = "14";
-        man.printFn();
+        Man man1 = new Man("Musharraf", 21);
+        
+        // man.name = "Musharraf";
+        // man.age = "14";
+        // man.printFn();
  
-        System.out.println("hello word");
+        // System.out.println(man1.name +" and "+ man1.age);
+        // System.out.println("hello word");
+        System.out.println();
+
+        man1.PrintInfo();
+
+        
     }
 }
