@@ -1,3 +1,6 @@
+import java.util.*;
+import bank;
+
 class Pen {
     String color;
     String type;
@@ -78,5 +81,6 @@ public class ClassPractice {
         female1.printFn();
         female1.printInformation("Gul", 22);
 
+        bank.Account =new bank.Account()
     }
 }
