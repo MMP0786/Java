@@ -46,6 +46,8 @@ class Man {
 }
 
 class Female extends Man{
+    String name;
+    int age;
 
 }
 
