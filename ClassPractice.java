@@ -1,5 +1,5 @@
 import java.util.*;
-import bank;
+// import bank;
 
 class Pen {
     String color;
@@ -31,23 +31,23 @@ class Man {
         this.age = man2.age;
     }
 
-    public void PrintInfo() {
-        System.out.println(this.name);
-        System.out.println(this.age);
-    }
-
+    
     public void printFn() {
         System.out.println(this.name);
         System.out.println(this.age);
     }
     Man(){
-
+        
     }
 }
 
 class Female extends Man{
     String name;
     int age;
+    public void PrintInfo() {
+        System.out.println(this.name);
+        System.out.println(this.age);
+    }
 
 }
 
@@ -83,6 +83,6 @@ public class ClassPractice {
         female1.printFn();
         female1.printInformation("Gul", 22);
 
-        bank.Account =new bank.Account()
+        // bank.Account =new bank.Account()
     }
 }
