@@ -30,6 +30,15 @@ public class Practice {
                     System.out.print(" ");
                 }
             }
+        // for(int i =0; i<=n; i++){ // row
+        //     for(int j=0; j<=m; j++){
+        //         if(i==0 || i==n|| j==m|| j==0){
+        //             System.out.print("*");
+
+        //         }else{
+        //             System.out.print(" ");
+        //         }
+        //     }
             // for(int j=0; j<=i; j++){
             //     System.out.print("*");
             // }
