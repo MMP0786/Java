@@ -92,19 +92,20 @@ public class Seventh {
     //     }
     // }
 
-    public static void Subsequences(String str, String newString, int idx){
-        if(idx == str.length()){
+    // public static void Subsequences(String str, String newString, int idx){
+    //     if(idx == str.length()){
            
-                System.out.println(newString);
-                return;
+    //             System.out.print(newString + " ");
+    //             return;
         
             
-        }
-        char currentChar = str.charAt(idx);
-        Subsequences(str, newString, idx+1);
-
-        Subsequences(str, newString+=currentChar, idx+1);
-    }
+    //     }
+    //     char currentChar = str.charAt(idx);
+    //     Subsequences(str, newString+currentChar, idx+1);
+        
+    //     Subsequences(str, newString, idx+1);
+        
+    // }
     // public static void Subsequences(String str, String newString, int idx, HashSet<String> set){
     //     if(idx == str.length()){
     //         if(set.contains(newString)){
@@ -119,12 +120,28 @@ public class Seventh {
     //     char currentChar = str.charAt(idx);
     //     Subsequences(str, newString, idx+1, set);
 
-    //     Subsequences(str, newString+=currentChar, idx+1, set);
+        // Subsequences(str, newString+=currentChar, idx+1, set);
     // }
+
+    public static String keypad [] = {".", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tu", "vw", "xyz"};
+    public static void printComb(String str, int idx, String combination){
+        if(idx==str.length()){
+            System.out.println(combination);
+            return;
+        }
+        char currChar = str.charAt(idx);
+
+        String mapping = keypad[currChar-'0'];
+        for(int i=0; i<mapping.length(); i++){
+            printComb(str, idx+1, combination+mapping.charAt(i));
+        }
+
+    }
     public static void main(String [] args){
-        String str = "aaa";
+        String str = "abc";
         int idx = str.length()-1;
         HashSet<String> set = new HashSet<>();
+        printComb("23", 0, "");
         // Subsequences(str, "", 0);
         // Subsequences(str, "", 0, set);
         // fistAndLastIndex(str, 0, 'a');

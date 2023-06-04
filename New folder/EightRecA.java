@@ -1,3 +1,4 @@
+// import bank.ccount;
 public class EightRecA{ 
 
     // public static void printPer(String str, String per){
@@ -59,6 +60,6 @@ public class EightRecA{
         // printPer("abc", "");
         // System.out.println(countPath(0, 0, 3, 3));
         // System.out.println(placeTiles(3, 2));
-        System.out.println(guestCall(4));
+        // System.out.println(guestCall(4));
     }
 }
