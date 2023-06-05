@@ -82,7 +82,7 @@ public class Seventh {
     //         return;
     //     }
     //     char current = str.charAt(idx);
-    //     if(arr[current - 'a']){
+    //     if(arr[current - 'a']){  
     //         removeDuplicates(str, idx+1, newString);
     //     }
     //     if(!(arr[current - 'a'])){
