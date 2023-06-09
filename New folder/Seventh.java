@@ -62,7 +62,7 @@ public class Seventh {
     //             newString +='a';
     //            }
     //            System.out.println(newString);
-    //         return ;
+    //         return;
     //     }
     //     if(str.charAt(idx)=='a'){
     //         count++;
@@ -70,9 +70,7 @@ public class Seventh {
     //     }else{
     //         newString += str.charAt(idx);
     //         moveX(str, newString, idx+1);
-
     //     }
-       
     // }
 
     // public static boolean[] arr = new  boolean[26];
@@ -137,8 +135,24 @@ public class Seventh {
         }
 
     }
+
+    public static boolean arr [] = new boolean[26];
+    public static void removeDuplicates(String str, String newStr, int idx){
+        if(idx== str.length()){
+            System.out.println(newStr);
+            return;
+        }
+        char current = str.charAt(idx);
+        if(arr[current-'a']){
+            removeDuplicates(str, newStr, idx+1);
+        }else{
+            // newStr +=current;
+            arr[current-'a'] = true;
+            removeDuplicates(str, newStr+current, idx+1);
+        }
+    }
     public static void main(String [] args){
-        String str = "abc";
+        String str = "abcccbjfhf";
         int idx = str.length()-1;
         HashSet<String> set = new HashSet<>();
         printComb("23", 0, "");
@@ -147,7 +161,7 @@ public class Seventh {
         // fistAndLastIndex(str, 0, 'a');
         // reverseString(idx, str);
         // int arr []= {1, 2, 4,5};
-        // removeDuplicates(str, 0, "");
+        // removeDuplicates(str, "", 0);
 
         // moveX(str, "", 0);
 
