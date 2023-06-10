@@ -1,61 +1,104 @@
-public class LL{
+import java.io.ObjectInputStream.GetField;
+
+class LL{
     Node head;
-    class Node{
+    private int size;
+
+    LL(){
+        size =0;
+    }
+    public class Node {
         String data;
         Node next;
 
         Node(String data){
             this.data = data;
             this.next = null;
+            size++;
         }
-
     }
-// Add First
-    public void AddFirst(String data){
-        Node newNode = new Node(data);
 
-        if(head ==null){
-            head = newNode;
-            return;
-        }
+    // Add First
+
+    public void addFirst(String data){
+        Node newNode = new Node(data);
 
         newNode.next = head;
-        head =newNode;
+        head = newNode;
     }
 
-    // Add Last
-    public void AddLast(String data){
+    // Last Node
+    public void addLast(String data){
         Node newNode = new Node(data);
+        Node lastNode = head;
+        while(lastNode.next!=null){
+            lastNode = lastNode.next;
+        }
+        lastNode.next = newNode;
+    }
 
-        Node currNode = head;
-        if(head ==null){
-            head = newNode;
+    // print LL
+    public void printLL(){
+        Node lastNode = head;
+        while(lastNode!=null){
+            System.out.print(lastNode.data + " => ");
+            lastNode = lastNode.next;
+        }
+        System.out.print("Null");
+    }
+
+//  remove reomoveLast
+    public void reomoveLast(){
+        Node secondLast = head;
+        size--;
+        if(head.next ==null){
+            head =null;
             return;
         }
-        while(currNode.next!= null){
-            currNode = currNode.next;
+        Node  lastNode= head.next;
+
+        while(lastNode.next!=null){
+            secondLast = secondLast.next;
+            lastNode = lastNode.next;
         }
-        currNode.next = newNode;
+        secondLast.next = null;
+    }
+    
+    public int getSize(){
+        return size;
     }
 
-    public void print(){
-        Node currNode = head;
-        if(head ==null){
-            System.out.println("Node is empty");
-            return;
+
+    public void reverseLL(){
+        Node prevNode = head;
+        Node currNode = prevNode .next;
+        while(currNode!=null){
+            // currNode= currNode.next;
+            Node nextNode = currNode.next;
+
+            // update
+            currNode.next = prevNode;
+            prevNode = currNode;
+            currNode = nextNode;
+
+
         }
-        while(currNode!= null){
-            System.out.print(currNode.data + " ");
-            currNode = currNode.next;
-        }
-        // System.out.println("Null");
+        head.next = null;
+        head = prevNode;
+    }
+    public static void main(String args []){
+     LL list  = new LL();
+     list.addFirst("is");
+     list.addFirst("This");
+     list.addLast("a ");
+     list.addLast("Text learning");
+     
+     list.printLL();
+     System.out.println();
+    //   list.reomoveLast();
+     System.out.println(list.getSize());
+     list.reverseLL();
+     list.printLL();
     }
 
-    public static void main(String args[]){
-        LL list = new LL();
-        list.AddFirst("Musharraf");
-        list.AddLast("is a");
-        list.AddLast("Good Boy");
-        list.print();
-    }
 }
