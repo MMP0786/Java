@@ -63,7 +63,7 @@ public class BinaryTree{
     // public static void levelOfOrder(Node root){
     //     if(root == null){
     //         return;
-    //     }
+   //     }
     //     Queue<Node> q = new LinkedList<>();{
     //     q.add(root);
     //     q.add(null);
@@ -183,4 +183,5 @@ public static TreeInfo diameter2(Node root){
         // System.out.println(diameter(root));
         System.out.println(diameter2(root).diam);
     }
+    
 }
