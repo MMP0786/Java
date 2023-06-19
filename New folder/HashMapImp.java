@@ -55,7 +55,7 @@ public class HashMapImp {
 
     double lamda = (double)n/N;
     if(lamda> 2.0){
-        rehash(); 
+        // rehash(); 
     }
     }
 

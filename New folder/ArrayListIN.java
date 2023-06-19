@@ -1,26 +1,26 @@
-import java.util.ArrayList;
-import java.util.Collections;
+// // import java.util.ArrayList;
+// import java.util.*;
 
-public class ArrayListIN {
-    public static void main(String args[]){
+// public class ArrayListIN {
+//     public static void main(String args[]){
 
-    ArrayList<Integer> list = new ArrayList<>();
+//     ArrayList<Integer> list = new ArrayList<>();
 
-    list.add(2);
-    list.add(5);
-    list.add(0,6);
+//     list.add(2);
+//     list.add(5);
+//     list.add(0,6);
 
-    int ele =list.get(1);
-    list.set(1,4);
+//     int ele =list.get(1);
+//     list.set(1,4);
 
-    // int rmv = list.remove(2);
-    // System.out.println("rmv "+ rmv);
+//     // int rmv = list.remove(2);
+//     // System.out.println("rmv "+ rmv);
 
     
-    Collections.sort(list);
-    // Collection.sort(list);
-    for(int i=0; i<list.size(); i++){
-        System.out.println(list.get(i));
-    }
-    }
-}
+//     // Collections.sort(list);
+//     // Collection.sort(list);
+//     for(int i=0; i<list.size(); i++){
+//         System.out.println(list.get(i));
+//     }
+//     }
+// }
