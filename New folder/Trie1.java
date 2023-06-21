@@ -56,17 +56,36 @@ public class Trie1 {
         }
         return true;
     }
-        public static void main(String args[]) {
-        String words[] = {"the", "a", "there", "their", "any"};
 
+    //  wordbreak
+    public static boolean wordbreak(String key){
+        if(key.length()==0){
+            return true;
+        }
+        for(int i =1; i<=key.length(); i++){
+            String firstPart = key.substring(0, i);
+            String secondPart = key.substring(i);
+
+            if(search(firstPart) && wordbreak(secondPart)){
+                return true;
+            }
+        }
+        return false;
+    }
+        public static void main(String args[]) {
+        String words[] = {"i", "like", "sam", "samsung", "any"};
+        String str = "ilikesamsung";
         for(int i=0; i<words.length; i++){
             insert(words[i]);
         }
 
-        System.out.println(search("th"));
-        System.out.println(search("their"));
-        System.out.println(search("ther"));
+        // System.out.println(search("th"));
+        // System.out.println(search("their"));
+        // System.out.println(search("ther"));
 
+        System.out.println();
+
+        System.out.println(wordbreak(str));
 
 
     }
