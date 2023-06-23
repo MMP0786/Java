@@ -39,8 +39,6 @@ public class Graph{
         graph[3].add(new Edge(3, 1, 2));
         graph[3].add(new Edge(3, 4, 2));
         graph[3].add(new Edge(3, 5, 2));
-// 0-1-2
-// 3-4
 
 
         graph[4].add(new Edge(4, 2, 2));
@@ -56,25 +54,25 @@ public class Graph{
 
     }
     // tranverse through bfs
-    public static void bfs(ArrayList<Edge> graph [], int v, boolean vis[], int start){
+    // public static void bfs(ArrayList<Edge> graph [], int v, boolean vis[], int start){
         
-        Queue<Integer> q = new LinkedList<>();
+    //     Queue<Integer> q = new LinkedList<>();
 
-        q.add(start);
-        while(!q.isEmpty()){
-            int curr = q.remove();
-            if(vis[curr]==false){
-                System.out.print(curr+" ");
-                vis[curr] =true;
+    //     q.add(start);
+    //     while(!q.isEmpty()){
+    //         int curr = q.remove();
+    //         if(vis[curr]==false){
+    //             System.out.print(curr+" ");
+    //             vis[curr] =true;
 
-                for(int i=0; i<graph[curr].size(); i++){
-                    Edge e = graph[curr].get(i);
-                    q.add(e.des);
-                }
-            }
-        }
+    //             for(int i=0; i<graph[curr].size(); i++){
+    //                 Edge e = graph[curr].get(i);
+    //                 q.add(e.des);
+    //             }
+    //         }
+    //     }
 
-    }
+    // }
 
     // dfs
     public static void dfs( ArrayList<Edge> graph [], int curr, boolean vis[]){
@@ -87,14 +85,35 @@ public class Graph{
                 dfs(graph, e.des, vis);
         }
     }
+
+    // Modified dfs 
+    public static void printAllPath(ArrayList<Edge> graph[], boolean vis[], int curr, String path, int tar){
+        if(curr == tar){
+            System.out.println(path);
+            return;
+        }
+        for(int i=0; i<graph[curr].size(); i++){
+            Edge e = graph[curr].get(i);
+            if(!vis[e.des]){
+                vis[curr]= true;
+                printAllPath(graph, vis, e.des, path+e.des, tar);
+                vis[curr] = false;
+            }
+        }
+    }
     public static void main(String args[]){
 
         int v= 7;
         ArrayList<Edge> graph []= new ArrayList[v];
         createGraph(graph);
 
+        for(int i=0; i<graph[2].size(); i++){
+            Edge e = graph[2].get(i);
+            System.out.println(e.des);
+        }
+
         boolean vis[] = new boolean[v];
-        
+
         // for(int i=0; i<graph.length; i++){
         //     if(vis[i]==false){
         //         bfs(graph, v, vis, i);
@@ -102,14 +121,16 @@ public class Graph{
         // }
         // bfs(graph, v);
 
-        for(int i=0; i<graph.length; i++){
-            if(vis[i]==false){
-                 dfs(graph, i, vis);
-            }
-        }
+        // for(int i=0; i<graph.length; i++){
+        //     if(vis[i]==false){
+        //          dfs(graph, i, vis);
+        //     }
+        // }
         
-
+        int src=0;
+        int tar= 5;
         // dfs
+        printAllPath(graph, new boolean[v], src, "0", tar);
         
 
 
