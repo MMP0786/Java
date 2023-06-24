@@ -1,0 +1,189 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Array2d",
+            "request": "launch",
+            "mainClass": "Array2d",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "ArrayPractice",
+            "request": "launch",
+            "mainClass": "ArrayPractice",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Binary",
+            "request": "launch",
+            "mainClass": "Binary",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "BitManuplation",
+            "request": "launch",
+            "mainClass": "BitManuplation",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Calculater",
+            "request": "launch",
+            "mainClass": "Calculater",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "ClassPractice",
+            "request": "launch",
+            "mainClass": "ClassPractice",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "DoWhile",
+            "request": "launch",
+            "mainClass": "DoWhile",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "EightRecA",
+            "request": "launch",
+            "mainClass": "EightRecA",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Excersice1",
+            "request": "launch",
+            "mainClass": "Excersice1",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "FiveSorting",
+            "request": "launch",
+            "mainClass": "FiveSorting",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Function",
+            "request": "launch",
+            "mainClass": "Function",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Graph",
+            "request": "launch",
+            "mainClass": "Graph",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "HashMapImp",
+            "request": "launch",
+            "mainClass": "HashMapImp",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Hello",
+            "request": "launch",
+            "mainClass": "Hello",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "IfElse",
+            "request": "launch",
+            "mainClass": "IfElse",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Loop",
+            "request": "launch",
+            "mainClass": "Loop",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "NewFileGraph",
+            "request": "launch",
+            "mainClass": "NewFileGraph",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Pattern",
+            "request": "launch",
+            "mainClass": "Pattern",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Practice",
+            "request": "launch",
+            "mainClass": "Practice",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Sorting",
+            "request": "launch",
+            "mainClass": "Sorting",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Strings",
+            "request": "launch",
+            "mainClass": "Strings",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "Trie1",
+            "request": "launch",
+            "mainClass": "Trie1",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "first",
+            "request": "launch",
+            "mainClass": "first",
+            "projectName": "Java_72da403b"
+        },
+        {
+            "type": "java",
+            "name": "sorting",
+            "request": "launch",
+            "mainClass": "sorting",
+            "projectName": "Java_72da403b"
+        }
+    ]
+}

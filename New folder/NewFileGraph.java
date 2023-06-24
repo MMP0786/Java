@@ -101,6 +101,25 @@ public class NewFileGraph{
             }
         }
     }
+
+//  cycle of
+public static boolean isCycled(ArrayList<Edge> graph[], int curr, boolean vis[], boolean rec[]){
+    vis[curr] = true;
+    rec[curr] = true;
+
+    for(int i=0; i<graph[curr].size(); i++){
+        Edge e = graph[curr].get(i);
+        if(rec[e.d]){
+            return true;
+        }else if(!vis[e.d]){
+            if(isCycled(graph, e.d, vis, rec)){
+                return true;
+            }
+        }
+    }
+    rec[curr]=false;
+    return false;
+}
     public static void main(String args[]){
         int v=7;
         ArrayList<Edge> graph [] = new ArrayList[v];
