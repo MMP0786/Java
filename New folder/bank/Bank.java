@@ -1,6 +1,11 @@
-// package bank;
+package bank;
 
-// public class Bank {
+class Account{
+    
+}
+public class Bank {
+    public String name;
+}
 //     protected String name;
 //     public int age;
         

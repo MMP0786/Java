@@ -1,5 +1,14 @@
+// import bank;
+
 public class FiveSorting {
-    public static void bubbleSort(int arr []){
+
+     public static void printArr(int arr []){
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
+        }
+    }
+
+    public static void bubbleSort(int arr []){ 
         for(int i=0; i<arr.length; i++){
             for(int j=0; j<arr.length-i-1; j++){
                 if(arr[j]> arr[j+1]){
@@ -12,12 +21,6 @@ public class FiveSorting {
             }
         }
         // printArr(arr);
-    }
-
-    public static void printArr(int arr []){
-        for(int i=0; i<arr.length; i++){
-            System.out.print(arr[i]+" ");
-        }
     }
 
     public static void selectionSort(int arr []){
@@ -120,6 +123,8 @@ public class FiveSorting {
         // QuickSort(arr, 0,  arr.length-1);
         divide(arr, 0, n-1);
         printArr(arr);
+
+
+        // bank.Bank customer1  = new bank.Bank();
     }
-    
 }
